@@ -4,7 +4,7 @@ from telebot import types
 import requests
 import json
 
-TOKEN = '6523571953:AAGoTAnmjz4m3uTfB7DrqY-Cn2W6Dtjmnxs'
+TOKEN = 'Добавьте свои данные'
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -29,7 +29,7 @@ def handle_first_message(message):
 
         cursor.execute("INSERT INTO user_actions (user_id, action_performed, telega) VALUES (?, ?, ?)", (user_id, 1, username))
         conn.commit()
-        webhook = 'https://ooo-promtreydinvest.bitrix24.ru/rest/279/krv77xyjn6k6hd13/'
+        webhook = 'Добавьте свои данные'
 
         data = {
             'fields': {
@@ -171,7 +171,7 @@ def handle_button_click(call):
         cursor.execute("SELECT * FROM user_actions WHERE user_id=?", (user_id,))
         result1 = cursor.fetchone()
         print('Смотри--> ',result1[5])
-        webhook = 'https://ooo-promtreydinvest.bitrix24.ru/rest/279/krv77xyjn6k6hd13/'
+        webhook = 'Добавьте свои данные'
 
         data = {
             'ID': result1[5],
@@ -215,7 +215,7 @@ def handle_contact(message):
     cursor.execute("SELECT * FROM user_actions WHERE user_id=?", (user_id,))
     result1 = cursor.fetchone()
     print('Смотри--> ',result1[5])
-    webhook = 'https://ooo-promtreydinvest.bitrix24.ru/rest/279/krv77xyjn6k6hd13/'
+    webhook = 'Добавьте свои данные'
 
     data = {
             'ID': result1[5],
